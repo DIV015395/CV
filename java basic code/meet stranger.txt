@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class HelloStrangers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("How many strangers do you want to meet? ");
+        int numStrangers = sc.nextInt();
+
+        if (numStrangers == 0) {
+            System.out.println("Oh, it looks like there is no one here.");
+            return;
+        } else if (numStrangers < 0) {
+            System.out.println("Seriously? Why so negative?");
+            return;
+        }
+
+        System.out.println("Enter the names of " + numStrangers + " strangers:");
+
+        for (int i = 0; i < numStrangers; i++) {
+            String name = sc.next();
+            System.out.println("Hello, " + name);
+        }
+    }
+}

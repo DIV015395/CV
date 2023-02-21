@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class GoDutch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the bill total amount: ");
+        int billTotal = sc.nextInt();
+
+        if (billTotal < 0) {
+            System.out.println("Bill total amount cannot be negative.");
+            return;
+        }
+
+        System.out.print("Enter the number of friends: ");
+        int numFriends = sc.nextInt();
+
+        if (numFriends <= 0) {
+            System.out.println("Number of friends cannot be negative or zero.");
+            return;
+        }
+
+        int totalWithTip = (int) Math.round(billTotal * 1.1);  // add 10% tip
+        int partToPay = totalWithTip / numFriends;
+
+        System.out.println("Each person should pay: " + partToPay);
+    }
+}

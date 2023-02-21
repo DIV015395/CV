@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Snail {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt(); // feet climbed during day
+        int b = scanner.nextInt(); // feet slipped during night
+        int h = scanner.nextInt(); // height of the tree
+        int days = 0;
+        int height = 0;
+        while (height < h) {
+            days++;
+            height += a;
+            if (height >= h) {
+                break;
+            }
+            height -= b;
+        }
+        if (height >= h) {
+            System.out.println(days);
+        } else {
+            System.out.println("Impossible");
+        }
+    }
+}

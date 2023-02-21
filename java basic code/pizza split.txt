@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class PizzaSplit {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int numPeople = scanner.nextInt();
+    int numPiecesPerPizza = scanner.nextInt();
+    int numPizzas = (numPeople * 2 + numPiecesPerPizza - 1) / numPiecesPerPizza;
+    System.out.println(numPizzas);
+  }
+}
